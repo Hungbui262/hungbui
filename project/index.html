@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>pokemon</title>
+  <meta name="viewport" content="width=device-width, inital-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <body>
+    <h1> POKEMON </h1>
+    <h2>What's pokemon do you wanna catch ??</h2>
+    <input type="text" id="pokName">
+    <button onclick="searchPok()"> Catch </button>
+    <h2>Computer will random a pokemon</h2>
+    <button onclick="randomPok()"> Random </button>
+    <button onclick="clearCard()"> Reset </button>
+    <div class="chosen-card-container" id="chosen-card-container"></div>
+    <div class="card-container" id="card-container"></div>
+    <button onclick="comPickCard()">Computer pick</button>
+    <script src="app.js"></script>
+  </body>
+</head>
+</html>
