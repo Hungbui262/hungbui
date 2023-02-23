@@ -1,3 +1,7 @@
+:root{
+  --primary-color: #09A430;
+  --secondary-color: #0D0D0D;
+}
 #wapper{
   margin-left: auto;
   margin-right: auto;
@@ -9,7 +13,7 @@ li {
  text-decoration: none;
 }
 .main-name{
-  color: rgb(9, 164, 48);
+  color: var(--primary-color)
 }
 .nav-link{
   text-align: right;
@@ -18,10 +22,10 @@ li {
   text-decoration: none;
   padding: 1em;
   font-size: large;
-  color: rgb(26, 191, 78);
+  color: var(--primary-color);
 }
 .container{
-  background-color: rgb(8, 8, 8);
+  background-color: rgb(13, 13, 13);
   display: flex;
   justify-content: space-around;
   padding: 10px;
@@ -35,24 +39,39 @@ li {
 }
 .header-content{
  display:flex;
-
+}
+.waviy{
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 160px;
+}
+.waviy span{
+  color: var(--primary-color);
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s*var(--i));
+}
+@keyframes waviy {
+  0%, 40%, 100%{
+    transform: translateY(0);
+  }
+  20%{
+    transform: translateY(-20px);
+  }
 }
 .header-content-text{
-  position: absolute;
-  top: 140;
-  left: 1000;
-}
-.header-content-text h1{
-  font-size: 3cm;
-  color: aqua;
+  position:relative
 }
 
 body{
-  background-color: rgb(10, 10, 10);
+  
+  background-color: rgb(12, 12, 12);
   align-items: center;
 }
 .img-container {
-  position: absolute;
+  position: relative;
 }
 
 .contact-container{
@@ -76,3 +95,45 @@ ul li {
   text-align: center;
   vertical-align: middle;
 }
+/*EDUCATION SECTION*/
+
+/* PROJECT SECTION*/
+#project{
+  margin-top: 20px;
+}
+
+#project .project-row{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+.project-container{
+  color: #09A430;
+}
+.project-col{
+  color: #09A430;
+  background-color: rgb(40, 38, 38);
+  padding: 20px;
+  border-radius: 17px;
+  transition: background 1s, color 1s, transform 0.5s;
+  font-size: 20;
+}
+.project-col h3{
+  padding: 3%;
+  margin-top: 10px;
+  text-align: center;
+}
+.project-col h4{
+  margin-top: 10px;
+  text-align: center;
+}
+.project-col:hover {
+  background-color: var(--primary-color);
+  color: black;
+  transform: translateY(-14px);
+}
+
+
+
+
